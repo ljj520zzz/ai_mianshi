@@ -37,7 +37,7 @@ spring:
         distance-type: COSINE_DISTANCE
         max-document-batch-size: 10000 # Optional: Maximum number of documents per batch
 server:
-  port: 8123
+  port: 682
   servlet:
     context-path: /api
 # springdoc-openapi config
@@ -65,3 +65,25 @@ search-api:
 logging:
   level:
     org.springframework.ai: DEBUG
+
+stripe:
+  enabled: false
+  secret-key: ${STRIPE_SECRET_KEY:}
+  webhook-secret: ${STRIPE_WEBHOOK_SECRET:}
+  price-id: ${STRIPE_PRICE_ID:}
+  frontend-public-url: ${APP_FRONTEND_PUBLIC_URL:http://localhost:3000}
+
+app:
+  # 知识库 .md 根目录。留空：开发环境读 classpath:document，写入 src/main/resources/document
+  # 服务器示例：/opt/LAYH/ai_mianshi/kd
+  knowledge-dir: /opt/LAYH/ai_mianshi/kd
+  datasource:
+    mysql:
+      url: jdbc:mysql://120.26.211.113:3306/ai_mianshi?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false
+      username: root
+      password: cY123456!@
+      driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true

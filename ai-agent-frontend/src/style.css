@@ -1,0 +1,51 @@
+:root {
+  font-family: 'PingFang SC', 'Microsoft YaHei', 'Inter', Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #0f172a;
+  background: #f6f8fc;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  width: 100%;
+}
+
+button {
+  border-radius: 10px;
+  border: 1px solid #dbe3ee;
+  padding: 0.52em 1.15em;
+  font-size: 0.96em;
+  font-weight: 500;
+  font-family: inherit;
+  background: #fff;
+  color: #0f172a;
+  cursor: pointer;
+  transition: all 0.22s ease;
+}
+button:hover {
+  border-color: #93c5fd;
+  transform: translateY(-1px);
+}
+button:focus,
+button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.18);
+}
+
+.card {
+  padding: 2em;
+}
+
+#app {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  text-align: initial;
+}
